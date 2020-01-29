@@ -1,0 +1,24 @@
+<template>
+    <lightning-card
+        title="User Info"
+        icon-name=""
+    >
+        <template if:true={user_info}>
+            <div class="slds-m-around_medium">
+                <p>{user_info.Name}</p>
+                <!-- <p>{user_info.Title}</p> -->
+                <p>
+                    <lightning-formatted-phone
+                        value={user_info.Phone}
+                    ></lightning-formatted-phone>
+                </p>
+                <!-- <p>
+                    <lightning-formatted-email
+                        value={user_info.Email}
+                    ></lightning-formatted-email>
+                </p> -->
+            </div>
+        </template>
+
+    </lightning-card>
+</template>

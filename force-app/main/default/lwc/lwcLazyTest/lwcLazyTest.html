@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Lazy Loading - LWC">
+        <div style="height: 250px;">
+            <lightning-datatable
+                key-field="Id"
+                columns={accountColumns}
+                data={accountData}
+                enable-infinite-loading={enableInfiniteLoading}
+                is-loading={tableLoadingState}
+                onloadmore={onLoadMoreHandler}>
+            </lightning-datatable>
+        </div>
+        <div class="nav-buttons">
+            <template if:false={isFirstPage}>
+                <button onclick={handlePrevPage}> Previous Page</button>
+                 </template>
+                 <template if:false={isLastPage}>
+                    <button onclick={handleNextPage}> Next Page</button>
+                     </template>
+        </div> 
+        <div class="page info">
+            Total Records: {totalRecordCount}
+            page ({pageNumber} of {totalPageCount})
+
+        </div> 
+    </lightning-card>
+</template>

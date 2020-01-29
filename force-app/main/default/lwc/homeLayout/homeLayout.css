@@ -1,0 +1,13 @@
+/* .custom_div {
+    background-color: #f4f6f9;
+   } */
+
+.cases_main{
+    min-height: 585px;
+    height: 520px;
+    overflow: overlay;
+}
+
+.account_outer{
+    margin: 0 0 19px 0;
+}

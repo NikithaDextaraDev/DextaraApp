@@ -1,0 +1,20 @@
+.my_contact_image {
+    border-radius: 50%;
+    border: 2px solid lightblue;
+}
+
+.key_data{
+    display: contents;
+}
+
+.contact_info{
+    border: 2px solid lightgray;
+    padding: 10px;
+    margin: 18px;
+}
+
+.contact_txt {
+    color: #000000c2;
+    font-size: 14px;
+    font-weight: bold;
+}

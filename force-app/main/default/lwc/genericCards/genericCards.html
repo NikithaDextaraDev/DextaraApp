@@ -1,0 +1,45 @@
+<template>
+    <lightning-card title="Design Attributes" icon-name="custom:custom19">
+        <center>
+                <ul>
+                    <li>Entered sObject : <b>{sObject}</b></li>
+                    <li>Entered Fields : <b>{Fields}</b></li>
+                </ul>
+            
+
+        </center>
+    </lightning-card>
+
+
+    
+            <template for:each={act_data} for:item="a" >            
+                <div key={a.Id}>  
+                  <div class="slds-grid slds-wrap">          
+                     <div class="slds-col slds-size_6-of-12">
+                          <lightning-card>                  
+                             {a.Name} 
+                             {a.Type} 
+                             {a.Industry}   
+                             {a.Phone} 
+                              <!-- {a.Fields} -->
+                              </lightning-card> 
+                     </div>
+                  </div>
+                </div>
+            </template>
+    
+  
+    <lightning-card>
+       <lightning-layout>
+          <lightning-layout-item>
+             <lightning-button label="Previous" icon-name="utility:chevronleft" onclick={handlePrevious} disabled={HidePreviousButton}></lightning-button>
+             </lightning-layout-item>
+             <lightning-layout-item flexibility="grow"></lightning-layout-item>
+             <lightning-layout-item>
+              <lightning-button label="Next" icon-name="utility:chevronright" icon-position="right" onclick={handleNext} disabled={HideNextButton}></lightning-button>
+           </lightning-layout-item>
+      </lightning-layout>
+      Dispalying {startingrecord} to {endingrecord} of {totalRecords} records. 
+      page {PageNumber} of {TotalPageNumbers}.
+    </lightning-card>
+</template>

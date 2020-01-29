@@ -1,0 +1,17 @@
+<template>
+    <div style="height: 300px;overflow:overlay;">
+        <lightning-card title="Data Load on Scroll Only">
+            <lightning-datatable 
+            key-field="Id" 
+            data={results} 
+            columns={columns} 
+            hide-checkbox-column="false"
+            show-row-number-column="true"
+            onsort={updateColumnSorting}
+            sorted-by={sortBy}
+            sorted-direction={sortDirection}
+            row-number-offset="0" >
+        </lightning-datatable>
+        </lightning-card>
+    </div>
+</template>

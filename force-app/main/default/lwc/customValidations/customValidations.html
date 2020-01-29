@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Create Account Record" icon-name="standard:account">
+        <div style="margin-left: 6%" if:true={error}>
+            <lightning-badge label={error} style="color: red;"></lightning-badge>
+        </div>
+
+        <template if:true={accRecord}>
+            <div class="slds-m-around--xx-large">
+                <div class="container-fluid">
+                    <div class="form-group">
+                        <lightning-input label="Enter Account Name" name="accName" class="accName" type="text" value={accRecord.Name} onblur={handleNameChange} minlength="3" message-when-bad-input="Your entry must be at least 3 characters." message-when-value-missing="Please enter your First Name"></lightning-input>
+                    </div>
+                    <div class="form-group">
+                        <lightning-input label="Enter Phone Number" name="accPhone" class="accPhone" type="phone" value={accRecord.Phone} onchange={handlePhoneChange} maxlength="10" message-when-bad-input="Your entry must be at least 10 characters." message-when-value-missing="Please enter your phone Number"></lightning-input>
+           </div>
+                    <div class="form-group">
+                        <lightning-input label="Enter Account Type" name="accType" class="accType" type="text" value={accRecord.Type} onblur={handleTypeChange}></lightning-input>
+                    </div>
+                    <div class="form-group">
+                        <lightning-input label="Enter Industry" name="accInd" class="accInd" type="text" value={accRecord.Industry} onblur={handleIndustryChange}></lightning-input>
+                    </div>
+                </div>
+                <br/>
+                <lightning-button label="Submit" onclick={handleSave} variant="brand"></lightning-button>
+            </div>
+        </template>
+        <template if:false={accRecord}>
+            <p>In Else Block</p>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title= "field mandatories">
+    <lightning-input label="First name" class="validValue inputFirstName" onblur={handleCustomValidationFirstName}
+                     minlength="3" field-level-help="This First Name show in Website" 
+                     message-when-bad-input="Your entry must be at least 3 characters."
+                     placeholder="First name" message-when-value-missing="Please enter your First Name"
+                     required>
+    </lightning-input>
+    <lightning-input label="Last name" class="validValue inputLastName" onblur={handleCustomValidationLastName}
+                     minlength="3" field-level-help="This First Name show in Website" 
+                     message-when-bad-input="Your entry must be at least 3 characters."
+                     placeholder="Last name" message-when-value-missing="Please enter your Last Name"
+                     required >
+    </lightning-input>
+    <lightning-button type="submit"
+                      label="Submit"
+                      onclick={handleValidation}>
+    </lightning-button>
+    </lightning-card>
+</template>

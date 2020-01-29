@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Contact Details">
+    <div class="slds-grid slds-wrap">
+    
+    <template for:each={contacts} for:item="contact">
+     
+    <div key={contact.Id} class="key_data">
+     
+    <div class="slds-col slds-size_6-of-12">
+    <div class="contact_info">
+   <!--<img src={myImage} class="my_contact_image"> --> 
+   <img
+     src={contact.Image__c}
+     alt="Profile photo"  
+                        />
+    <p class="contact_txt"> {contact.Name}</p>
+    <p class="contact_txt"> {contact.Title}</p>
+    <p class="contact_txt"> {contact.Department}</p>
+    <p class="contact_txt"> {contact.Phone}</p>
+    </div>
+    </div>
+      
+    </div>
+     
+    
+    </template>
+   <!-- <c-contact-card-buttons onprevious={previousHandler} onnext={nextHandler}>></c-contact-card-buttons> -->
+    </div>
+    </lightning-card>
+    
+    </template>
+    
+     

@@ -1,0 +1,113 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/accountData": [
+                "accountData/accountData.js"
+            ],
+            "c/accountForm": [
+                "accountForm/accountForm.js"
+            ],
+            "c/accountrecordform": [
+                "accountrecordform/accountrecordform.js"
+            ],
+            "c/chartjs": [
+                "chartjs/chartjs.js"
+            ],
+            "c/child": [
+                "child/child.js"
+            ],
+            "c/contactCardButtons": [
+                "contactCardButtons/contactCardButtons.js"
+            ],
+            "c/contactCards": [
+                "contactCards/contactCards.js"
+            ],
+            "c/contactFormReuse": [
+                "contactFormReuse/contactFormReuse.js"
+            ],
+            "c/contactListImage": [
+                "contactListImage/contactListImage.js"
+            ],
+            "c/contactListItem": [
+                "contactListItem/contactListItem.js"
+            ],
+            "c/contactPagination": [
+                "contactPagination/contactPagination.js"
+            ],
+            "c/contactform": [
+                "contactform/contactform.js"
+            ],
+            "c/customChart": [
+                "customChart/customChart.js"
+            ],
+            "c/customValidations": [
+                "customValidations/customValidations.js"
+            ],
+            "c/dashboard": [
+                "dashboard/dashboard.js"
+            ],
+            "c/donutchart": [
+                "donutchart/donutchart.js"
+            ],
+            "c/errorhandling": [
+                "errorhandling/errorhandling.js"
+            ],
+            "c/formvalidation": [
+                "formvalidation/formvalidation.js"
+            ],
+            "c/genericCards": [
+                "genericCards/genericCards.js"
+            ],
+            "c/hello": [
+                "hello/hello.js"
+            ],
+            "c/homeLayout": [
+                "homeLayout/homeLayout.js"
+            ],
+            "c/iterativeCards": [
+                "iterativeCards/iterativeCards.js"
+            ],
+            "c/listOfData": [
+                "listOfData/listOfData.js"
+            ],
+            "c/lwcContactAddressForm": [
+                "lwcContactAddressForm/lwcContactAddressForm.js"
+            ],
+            "c/lwcLazyTest": [
+                "lwcLazyTest/lwcLazyTest.js"
+            ],
+            "c/lwcMyTestLazy": [
+                "lwcMyTestLazy/lwcMyTestLazy.js"
+            ],
+            "c/paginationButtons": [
+                "paginationButtons/paginationButtons.js"
+            ],
+            "c/parent": [
+                "parent/parent.js"
+            ],
+            "c/pubsub": [
+                "pubsub/pubsub.js"
+            ],
+            "c/reusecardcontact": [
+                "reusecardcontact/reusecardcontact.js"
+            ],
+            "c/reusecardone": [
+                "reusecardone/reusecardone.js"
+            ],
+            "c/searchMyContact": [
+                "searchMyContact/searchMyContact.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

@@ -1,0 +1,30 @@
+<template>
+  <lightning-card title="contactform">
+  <lightning-record-edit-form object-api-name={Contact} >
+      <lightning-messages></lightning-messages>
+      <div class="slds-grid">
+          <div class="slds-col slds-size_1-of-2">
+              <lightning-input-field field-name={Name} class="validValue inputFirstName" onblur={handleCustomValidationFirstName}
+              minlength="3" field-level-help="This First Name show in Website" 
+              message-when-bad-input="Your entry must be at least 3 characters."
+              placeholder="First name" message-when-value-missing="Please enter your First Name" ></lightning-input-field>
+              <lightning-input-field field-name={Phone} class="validValue inputPhone" onblur={handleCustomValidationPhone}
+              minlength="10" field-level-help="This Phone show in Website" 
+              message-when-bad-input="Your entry must be 10 characters."
+              placeholder="Phone" message-when-value-missing="Please enter your Phone"></lightning-input-field>
+          </div>
+          <div class="slds-col slds-size_1-of-2">
+            <lightning-input-field field-name={Fax} class="validValue inputFax" onblur={handleCustomValidationFax}
+            minlength="8" field-level-help="This Fax show in Website" 
+            message-when-bad-input="Your entry must be at least 8 characters."
+            placeholder="Fax" message-when-value-missing="Please enter your Fax"></lightning-input-field>
+            <!--<lightning-input-field field-name={Email} class="validValue inputEmail" onblur={handleCustomValidationEmail}
+            minlength="3" field-level-help="This First Name show in Website" 
+            message-when-bad-input="Your entry must be at least 3 characters."
+            placeholder="First name" message-when-value-missing="Please enter your First Name" class="input"></lightning-input-field> -->
+          </div>
+       </div>
+      <lightning-button type="submit" variant="brand" label="Create Contact" onclick={AddContact}></lightning-button>
+  </lightning-record-edit-form>
+</lightning-card>
+</template>

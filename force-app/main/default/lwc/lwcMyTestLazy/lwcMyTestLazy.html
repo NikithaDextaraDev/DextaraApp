@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="DataTable with Sort">
+        <lightning-datatable 
+        key-field="Id" 
+        data={results} 
+        columns={columns} 
+        hide-checkbox-column="false"
+        show-row-number-column="true"
+        onsort={updateColumnSorting}
+        sorted-by={sortBy}
+        sorted-direction={sortDirection}
+        row-number-offset="0"
+        onrowaction={handleRowActions} >
+    </lightning-datatable>
+    <div class="customPagination">
+        <template for:each={paginationRange} for:item="pageNumber">
+            <a
+                onclick={handlePaginationClick}
+                key={pageNumber}
+                data-target-number={pageNumber}
+                >{pageNumber}</a
+            >
+        </template></div>
+        <c-pagination-buttons onprevious={previousHandler} onnext={nextHandler}></c-pagination-buttons>
+    </lightning-card>
+</template>

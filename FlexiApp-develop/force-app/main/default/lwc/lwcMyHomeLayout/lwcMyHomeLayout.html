@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="LWC My Home Page Layout">
+        <!-- <c-data-table-wrapper-example account-data={myAccountData}></c-data-table-wrapper-example > -->
+				<div class="slds-m-around_medium krishna_cs" onscroll={handleToggleSection}>
+					<!-- <c-libs-d3></c-libs-d3> -->
+					<!-- <c-custom-chart></c-custom-chart> -->
+					<!-- <lightning-button label="Check" onclick={getTable} variant=""></lightning-button> -->
+					<c-data-table-wrapper-use-one></c-data-table-wrapper-use-one>
+					<c-data-table-wrapper-use-two></c-data-table-wrapper-use-two>
+					<c-search-my-contact></c-search-my-contact>
+					<c-list-of-data></c-list-of-data>
+				</div>
+				<!-- <p>{displayCondition}</p> -->
+				<template if:true={displayCondition}>
+					<c-lwc-lazy-test></c-lwc-lazy-test>
+					<c-record-creation></c-record-creation>
+					<c-custom-chart></c-custom-chart>
+				</template>
+    </lightning-card>
+</template>
